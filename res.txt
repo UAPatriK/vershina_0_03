@@ -1,0 +1,147 @@
+  <nav class="navbar navbar-vershina" role="navigation">
+  <div class="container-fluid">
+    <!-- Бренд та перемикач згруповані для кращого відображення на мобільних пристроях -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand_logo" href="#"><img src="<?php bloginfo('template_url'); ?>/images/vershina_logo.png" class="img-responsive"></a>
+    </div>
+
+    <!-- Зібрано навігаційні лінки, форми, та інший вміст для переключення -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Перечень курсов</a></li>
+        <li><a href="#">Цена</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Фото <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Наши аудитории</a></li>
+            <li><a href="#">Игровая компната</a></li>
+            <li><a href="#">Мероприятия</a></li>
+           <li><a href="#">Вспомогательные помещения</a></li>
+           <li><a href="#">Методические пособия и игрушки</a></li>
+           <li><a href="#">Фотогалерея</a></li>
+          </ul>
+        </li>
+        
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Доп. услуги<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Логопеды</a></li>
+            <li><a href="#">Организация праздников</a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="#">Новости</a></li>
+
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">О нас <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Правила клуба</a></li>
+            <li><a href="#">Наша команда</a></li>
+             <li><a href="#">Инфраструктура</a></li>
+              <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
+        </li>
+         <li><a href="#">Контакты</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+
+
+
+<table class="table table-bordered table-style">
+  <thead><th style="vertical-align:middle">Услуги</th><th style="vertical-align:middle">Уровень 1</th><th style="vertical-align:middle">Уровень 2</th><th style="vertical-align:middle">Уровень 3</th></thead>
+  <tr><td class="table-style-td">Воздушные шарики</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">- </td></tr>
+  <tr><td class="table-style-td">Аниматоры</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">- </td></tr>
+<tr><td class="table-style-td">Эксклюзивный торт</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">-</td><td  style="vertical-align:middle">- </td></tr>
+
+
+</table>
+
+
+
+
+
+<table class="table table-bordered table-style">
+  <thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th></thead>
+  <tr><td class="table-style-td">Раннее развитие (8 мес - 4 года)</td><td rowspan="5" style="vertical-align:middle">1 час</td><td rowspan="5" style="vertical-align:middle">100 грн</td><td rowspan="5" style="vertical-align:middle">640 грн за 8 занятий </td><td rowspan="5" style="vertical-align:middle" colspan="3">80 грн за 1 занятие</td></tr>
+  <tr><td class="table-style-td">Подготовка к школе (4 - 7 лет)</td></tr>
+<tr><td class="table-style-td">Английский язык (3 - 8 лет)</td></tr>
+<tr><td class="table-style-td">Ритмика и хореография (с 3-х лет)</td></tr>
+<tr><td class="table-style-td">Курс "Живи безопасно!!!" (с 3-х лет)</td></tr>
+  <tr><td colspan="7"></td></tr>
+ <thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного дня (4-х часового пребывания)</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента)</th></thead>
+ 
+ <tr><td rowspan="2" class="table-style-td" style="vertical-align:middle">Сундучок знаний (программа выходного дня: суббота, воскресенье)</td><td rowspan="2" style="vertical-align:middle">4 часа</td><td rowspan="2" style="vertical-align:middle">270 грн</td>
+              <td >880 грн 4 занятия в месяц </td><td colspan="3" style="vertical-align:middle">220 грн за 1 занятие</td></tr>
+<tr><td>1520 грн 8 занятий в месяц</td><td colspan="3" style="vertical-align:middle">190  грн за 1 занятие</td></tr>
+  <tr><td colspan="7"></td></tr>
+
+<thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного дня (4-х часового пребывания)</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента)</th></thead>
+  <tr><td class="table-style-td" style="vertical-align:middle">Мини-сад (1,5 – 5 лет)</td><td style="vertical-align:middle">4 часа</td><td style="vertical-align:middle">200 грн</td><td style="vertical-align:middle">3100 грн за месяц 5 раз в неделю</td><td colspan="3" style="vertical-align:middle">140 грн за 4 часа</td></tr>
+
+ <tr><td colspan="7"></td></tr>
+
+ <thead><th style="vertical-align:middle">Курс</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента на 3 месяца</th></thead>
+<tr>
+  <td class="table-style-td" style="vertical-align:middle">Основы программирования (9 - 14 лет)</td><td style="vertical-align:middle">1 час</td><td style="vertical-align:middle">150 грн</td><td style="vertical-align:middle">960 грн 8 занятий</td><td style="vertical-align:middle">120 грн за 1 занятие</td><td style="vertical-align:middle">2400 грн 24 занятия</td><td style="vertical-align:middle">100 грн за 1 занятие</td>
+
+</tr>
+   <tr><td colspan="7"></td></tr>
+
+  <thead><th style="vertical-align:middle">Курс</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента на 3 месяца</th></thead>
+<tr> <td class="table-style-td" style="vertical-align:middle">Эксклюзивный Курс «Логика, память, внимание» (4-8 лет)</td><td style="vertical-align:middle">1 час</td><td style="vertical-align:middle">120 грн</td><td style="vertical-align:middle">800 грн 8 занятий</td><td style="vertical-align:middle">100 грн за 1 занятие</td><td style="vertical-align:middle">1920 грн за 24 занятия</td><td style="vertical-align:middle">80 грн за 1 занятие</td></tr>
+</table>
+
+
+
+
+
+<table class="table table-bordered table-style">
+  <thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th></thead>
+  <tr><td class="table-style-td"><b>Раннее развитие</b><br/> (8 мес - 4 года)</td><td rowspan="7" style="vertical-align:middle">1 час</td><td rowspan="7" style="vertical-align:middle">100 грн</td><td rowspan="7" style="vertical-align:middle">640 грн за 8 занятий </td><td rowspan="7" style="vertical-align:middle" colspan="3">80 грн за 1 занятие</td></tr>
+  <tr><td class="table-style-td"><b>Подготовка к школе</b> <br/>(4 - 7 лет)</td></tr>
+<tr><td class="table-style-td"><b>Английский язык</b> <br/>(3 - 8 лет)</td></tr>
+<tr><td class="table-style-td"><b>Бальные танцы</b> <br/>(3 - 15 лет)</td></tr>
+<tr><td class="table-style-td"><b>Ритмика и хореография </b><br/>(2 - 8 лет)</td></tr>
+<tr><td class="table-style-td"><b>Курс "Живи безопасно!!!"</b> <br/>(3 - 10 лет)</td></tr>
+<tr><td class="table-style-td"><b>Колесо истории</b> <br/> (4 - 10 лет)</td></tr>
+
+  <tr><td colspan="7"></td></tr>
+ <thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного дня (4-х часового пребывания)</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента)</th></thead>
+ 
+ <tr><td rowspan="2" class="table-style-td" style="vertical-align:middle"><b>Сундучок знаний</b> </br> (программа выходного дня: суббота)</td><td rowspan="2" style="vertical-align:middle">4 часа</td><td rowspan="2" style="vertical-align:middle">270 грн</td>
+              <td >880 грн 4 занятия в месяц </td><td colspan="3" style="vertical-align:middle">220 грн за 1 занятие</td></tr>
+<tr><td>1520 грн 8 занятий в месяц</td><td colspan="3" style="vertical-align:middle">190  грн за 1 занятие</td></tr>
+  <tr><td colspan="7"></td></tr>
+
+<thead><th style="vertical-align:middle">Направления</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного дня (4-х часового пребывания)</th><th colspan="4" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента)</th></thead>
+  <tr><td class="table-style-td" style="vertical-align:middle"><b>Мини-сад</b> <br/> (1,5 – 5 лет)</td><td style="vertical-align:middle">4 часа</td><td style="vertical-align:middle">200 грн</td><td style="vertical-align:middle">3100 грн за месяц 5 раз в неделю</td><td colspan="3" style="vertical-align:middle">140 грн за 4 часа</td></tr>
+
+ <tr><td colspan="7"></td></tr>
+
+ <thead><th style="vertical-align:middle">Курс</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента на 3 месяца</th></thead>
+<tr>
+  <td class="table-style-td" style="vertical-align:middle"><b>Основы программирования</b> <br/> (9 - 14 лет)</td><td style="vertical-align:middle">1 час</td><td style="vertical-align:middle">150 грн</td><td style="vertical-align:middle">960 грн 8 занятий</td><td style="vertical-align:middle">120 грн за 1 занятие</td><td style="vertical-align:middle">2400 грн 24 занятия</td><td style="vertical-align:middle">100 грн за 1 занятие</td>
+
+</tr>
+   <tr><td colspan="7"></td></tr>
+
+  <thead><th style="vertical-align:middle">Курс</th><th style="vertical-align:middle">Продолжительность</th><th style="vertical-align:middle">Стоимость одного занятия</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента в месяц (при условии покупки абонемента от 8 занятий)</th><th colspan="2" style="vertical-align:middle">Стоимость абонемента на 3 месяца</th></thead>
+<tr> <td class="table-style-td" style="vertical-align:middle"><b>Эксклюзивный Курс «Логика, память, внимание»</b> <br/> (4 - 8 лет)</td><td style="vertical-align:middle">1 час</td><td style="vertical-align:middle">120 грн</td><td style="vertical-align:middle">800 грн 8 занятий</td><td style="vertical-align:middle">100 грн за 1 занятие</td><td style="vertical-align:middle">1920 грн за 24 занятия</td><td style="vertical-align:middle">80 грн за 1 занятие</td></tr>
+</table>

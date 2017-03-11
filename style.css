@@ -1,0 +1,759 @@
+/*
+Theme name: Vershina
+Theme URI: 
+Description: this theme was developed for private organization Vershina, Dnipropetrovsk, Ukraine
+Version: 0.03
+Author: Vlasov Vladislav
+Author URI: iti.dp.ua
+Tags: children, child, kindergarden, school, lessons
+ */
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+   background-color: #FCEAF4;
+    background: url(images/vershina_back.png) repeat-y ;
+  /*      -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;*/
+        width: 100%
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+.container {
+  background-color: #fff;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 950px;
+    background-color: #fff;
+  /**/
+ 
+  }
+  .brand_logo {
+    margin-left: 194px;
+    display: block;
+  }
+}
+
+.pd-container {
+   /* padding-left: 55px;*/
+    margin-top: 40px;
+
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+ 
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 30px;
+     /* padding-right: 55px;*/
+}
+
+.blog-post-2 {
+  margin-bottom: 30px;
+      padding-right: 25px;
+}
+
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+
+}
+
+.blog-post-big-title {
+ margin-bottom: 25px;
+  font-size: 28px;
+  color: #A50057;
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer a {
+  color: #EFDBE5;
+  text-decoration: none;
+}
+
+.blog-footer a:hover {
+  color: #EFDBE5;
+  text-decoration: underline;
+}
+
+.blog-footer {
+  padding: 40px 0 0px 0;
+  color: #EFDAE5;
+  
+  background-color: #A50057;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.navbar-vershina {
+  background-color: #A50057;
+  border-color: #A50057;
+  box-shadow: 0px 0px 10px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-vershina .navbar-brand {
+  color: #fff;
+}
+.navbar-vershina .navbar-brand:hover,
+.navbar-vershina .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-vershina .navbar-text {
+  color: #777;
+}
+.navbar-vershina .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-vershina .navbar-nav > li > a:hover,
+.navbar-vershina .navbar-nav > li > a:focus {
+  color: #A50057;
+  background-color: #fff;
+}
+.navbar-vershina .navbar-nav > .active > a,
+.navbar-vershina .navbar-nav > .active > a:hover,
+.navbar-vershina .navbar-nav > .active > a:focus {
+  color: #A50057;
+  background-color: #fff;
+}
+/*.navbar-vershina .navbar-nav > .disabled > a,
+.navbar-vershina .navbar-nav > .disabled > a:hover,
+.navbar-vershina .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}*/
+.navbar-vershina .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-vershina .navbar-toggle:hover,
+.navbar-vershina .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-vershina .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-vershina .navbar-collapse,
+.navbar-vershina .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-vershina .navbar-nav > .open > a,
+.navbar-vershina .navbar-nav > .open > a:hover,
+.navbar-vershina .navbar-nav > .open > a:focus {
+  color: #A50057;
+  background-color: #fff;
+}
+/*@media (max-width: 767px) {
+  .navbar-vershina .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-vershina .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-vershina .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-vershina .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-vershina .navbar-link {
+  color: #777;
+}
+.navbar-vershina .navbar-link:hover {
+  color: #333;
+}
+.navbar-vershina .btn-link {
+  color: #777;
+}
+.navbar-vershina .btn-link:hover,
+.navbar-vershina .btn-link:focus {
+  color: #333;
+}
+.navbar-vershina .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-vershina .btn-link:hover,
+.navbar-vershina .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-vershina .btn-link:focus {
+  color: #ccc;
+}*/
+
+.navbar {
+ 
+  margin-bottom: 0px;
+
+}
+
+ .mrsoc {
+    margin-right: 7px;
+    padding-bottom: 7px;
+    display: inline-block;
+
+  }
+
+
+
+
+
+  .navbar {
+    border-radius: 0px;
+  }
+
+
+
+
+.main-page_course_2 {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+  -top: 10px;
+  margin-bottom: 15px;
+  margin-right: 7%;
+}
+
+
+.mrb {
+  margin-bottom: 30px;
+}
+
+.mrb_2 {
+  margin-bottom: 20px;
+}
+.pdleft_0 {
+  padding-left: 0px;
+}
+
+
+.blog-post-main {
+  /*margin-bottom: 20px;*/
+  color: #999;
+  font-size: 14px;
+}
+
+.main_news_page_sign {
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+
+.sidebar_module_contacts {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 25px;
+  border-left: 1px solid  #A50057;
+  margin-bottom: 50px;
+
+}
+
+.sidebar_module_contacts p{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.sidebar_module_contact_form {
+   padding-top: 15px;
+   padding-bottom: 15px;
+  background-color: #EFDAE5;
+  border-radius: 0px; 
+  padding-left: 25px;
+}
+
+
+
+
+
+.btn-send {
+  color: #fff;
+  background-color: #A50057;
+  border-color: none;
+}
+.btn-send:focus,
+.btn-send.focus {
+  color: #fff;
+  background-color: #F7BBD9;
+  border-color: none;
+}
+.btn-send:hover {
+  color: #A50057;
+  background-color: #fff;
+  border-color: none;
+}
+
+
+
+
+
+.form-control:focus {
+  border-color: #A50057;
+  outline: 0;
+/*  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+*/}
+
+
+.mrt10 {
+  margin-top: 10px;
+}
+
+
+.main-page_course a{
+
+color: #333;
+
+}
+
+a.black_signs {
+  color: #333;
+  text-decoration: none;
+}
+
+a.black_signs:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+a.black_signs_main {
+  font-size: 13px;
+  line-height: 0.9em;
+color: #333;
+  text-decoration: none;
+}
+
+a.black_signs_main:hover {
+  color: #A50057;
+  line-height: 0.9em;
+
+  font-size: 13px;
+}
+.mpc a{
+  
+  : 15px;
+margin-top: 10px;
+}
+
+
+a {
+  color: #A50057;
+  text-decoration: none;
+
+}
+a:hover,
+a:focus {
+  color: #A50057;
+  text-decoration: underline;
+}
+
+
+a.more_link {
+color: #A50057;
+  text-decoration: underline;
+
+}
+
+a:hover,
+a:focus {
+  color: #A50057;
+  text-decoration: none;
+}
+
+.image-post {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.mbr1 {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.teacher_style {
+
+  background-color: #f4f4f4;
+
+}
+.mrbright {
+  margin-right: 100px;
+}
+
+.table-style {
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* .table-style td{
+    background-color: #fff;
+  } */
+
+
+.table-style th {
+  text-align: center;
+  background-color: #C3257A;
+  color: #fff;
+text-align: middle;
+}
+
+.table-style-td {
+  text-align: left;
+  background-color: #FFF;
+ 
+  color: #333;
+  text-align: middle;
+}
+
+.mrb40 {
+  margin-bottom: 40px;
+}
+
+.table-style td {
+  vertical-align: middle;
+}
+
+/* 03.02.16 */
+
+
+.sign_mrg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+.cell_table_border_none {
+  border-top:0px;
+}
+
+.content_pds {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+ .mrb_catalogue {
+  margin-bottom: 10px;
+ }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px) { 
+
+.mrb_cell {
+  margin-bottom: 15px;
+}
+.col-lg-12-cont {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.course_sign {
+  font-size: 16px;
+}
+
+.table_style_sign {
+  border: 0px;
+  min-height: 55px;
+
+  margin-bottom: 0px;
+}
+
+.main-page_course {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 55px;
+    
+}
+
+.page_events {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 66px;
+    
+}
+.mrb_course {
+  margin-bottom: 30px;
+}
+}
+
+ 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+.course_sign {
+  font-size: 12px;
+}
+.sm_row {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.mrb_cell {
+  margin-bottom: 30px;
+}
+
+.table_style_sign {
+  border: 0px;
+  min-height: 75px;
+
+  margin-bottom: 0px;
+}
+
+.main-page_course {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 70px;
+    
+}
+.page_events {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 70px;
+    
+}
+
+.mrb_course {
+  margin-bottom: 10px;
+}
+
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+.mrb_cell {
+  margin-bottom: 30px;
+}
+
+.table_style_sign {
+  border: 0px;
+  min-height: 70px;
+
+  margin-bottom: 0px;
+}
+
+.main-page_course {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 70px;
+    
+}
+.page_events {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 70px;
+    
+}
+
+
+.mrb_course {
+  margin-bottom: 15px;
+}
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+.mrb_cell {
+  margin-bottom: 30px;
+}
+.col-lg-12-cont {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.table_style_sign {
+  border: 0px;
+  min-height: 55px;
+
+  margin-bottom: 0px;
+}
+
+.course_sign {
+  font-size: 12px;
+}
+
+.main-page_course {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 55px;
+    
+}
+
+.page_events {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #333333;
+text-align: center;
+  margin-bottom: 15px;
+  min-height: 66px;
+    
+}
+
+.mrb_course {
+  margin-bottom: 10px;
+}
+
+ }
+
+
+ .slides a {
+  display: none;
+ }
+
+
+
+ ul#navmenu-f {
+list-style-type: none;
+-webkit-padding-start: 0px;
+ }
+
+
+
+
+.events_price{
+  color: #fff;
+  background-color: #f09fcd;
+}
+
+.events_price_1{
+  color: #fff;
+  background-color: #E770B0;
+}
+
+.events_price_2{
+  color: #fff;
+  background-color: #DE539D;
+}
+
+
+
+
+
+

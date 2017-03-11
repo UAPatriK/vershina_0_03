@@ -1,0 +1,8 @@
+body.login {
+background: #F9E4EF ;
+}
+
+
+.login #backtoblog a, .login #nav a, .login h1 a {
+	color:#A50057;
+}
