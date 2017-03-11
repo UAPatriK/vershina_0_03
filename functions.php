@@ -1001,6 +1001,140 @@ add_action('login_head', 'custom_login_css');
 
 
 
+// Code for Events
+
+function my_custom_post_events() {
+  $labels = array(
+    'name'               => _x( 'Мероприятия', 'post type general name' ),
+    'singular_name'      => _x( 'Мероприятиее', 'post type singular name' ),
+    'add_new'            => _x( 'Добавить новое мероприятие', 'book' ),
+    'add_new_item'       => __( 'Новое мероприятие' ),
+    'edit_item'          => __( 'Редактировать мероприятие' ),
+    'new_item'           => __( 'Новое мероприятие' ),
+    'all_items'          => __( 'Все мероприятия' ),
+    'view_item'          => __( 'Просмотреть мероприятие' ),
+    'search_items'       => __( 'Искать мероприятие' ),
+    'not_found'          => __( 'Мероприятия не найдены' ),
+    'not_found_in_trash' => __( 'В корзине мероприятия не найдены' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Мероприятия'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Тип записи для отображения мероприятий',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => array( 'title', 'thumbnail'),
+    'has_archive'   => true,
+     'menu_icon' => 'dashicons-calendar-alt',
+  );
+  register_post_type( 'events', $args ); 
+}
+add_action( 'init', 'my_custom_post_events' );
+
+function my_updated_messages_events( $messages ) {
+  global $post, $post_ID;
+  $messages['events'] = array(
+    0 => '', 
+    1 => sprintf( __('Мероприятие обновлено. <a href="%s">Просмотреть мероприятие</a>'), esc_url( get_permalink($post_ID) ) ),
+    2 => __('Поле добавлено.'),
+    3 => __('Поле удалено.'),
+    4 => __('Мероприятие обновлено.'),
+    5 => isset($_GET['revision']) ? sprintf( __('Мероприятие обновлено от %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+    6 => sprintf( __('Мероприятие опубликовано. <a href="%s">View events</a>'), esc_url( get_permalink($post_ID) ) ),
+    7 => __('Мероприятие сохранено.'),
+    8 => sprintf( __('Предпросмотр мероприятия <a target="_blank" href="%s">Preview events</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+    9 => sprintf( __('Публикация мероприятия запланирвоана: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Предпросмотр мероприятия</a>'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+    10 => sprintf( __('Черновик мероприятия сохранен. <a target="_blank" href="%s">Предпросмотр мероприятия</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+  );
+  return $messages;
+}
+add_filter( 'post_updated_messages', 'my_updated_messages_events' );
+
+
+// подключаем функцию активации мета блока (my_extra_fields)
+add_action('add_meta_boxes', 'my_extra_fields_events', 1);
+
+function my_extra_fields_events() {
+	add_meta_box( 'extra_fields', 'Дополнительные поля', 'extra_fields_box_func_events', 'events', 'normal', 'high'  );
+}
+
+// код блока
+function extra_fields_box_func_events( $post ){
+?>
+
+<table width="100%" border="1" cellspacing="0" bordercolor="ececec" cellpadding="7">
+
+<tr><label>
+	<td>
+	Дата мероприятия:
+	</td>
+	<td>
+		<input type="text" name="extra[events_row_1]" value="<?php echo get_post_meta($post->ID, 'events_row_1', 1); ?>" style="width:50%" />
+	</td></label>
+</tr>
+<tr><label>
+	<td>
+	Время мероприятия:
+	</td>
+	<td>
+		<input type="text" name="extra[events_row_2]" value="<?php echo get_post_meta($post->ID, 'events_row_2', 1); ?>" style="width:50%" />
+	</td></label>
+</tr>
+<tr><label>
+	<td>
+	Название мероприятия:
+	</td>
+	<td>
+		<input type="text" name="extra[events_row_3]" value="<?php echo get_post_meta($post->ID, 'events_row_3', 1); ?>" style="width:50%" />
+	</td></label>
+</tr>
+<tr><label>
+	<td>
+	Ссылка на запись с мероприятием:
+	</td>
+	<td>
+		<input type="text" name="extra[events_row_4]" value="<?php echo get_post_meta($post->ID, 'events_row_4', 1); ?>" style="width:50%" />
+	</td></label>
+</tr>
+<tr><label>
+	<td>
+	Стоимость мероприятия:
+	</td>
+	<td>
+		<input type="text" name="extra[events_row_5]" value="<?php echo get_post_meta($post->ID, 'events_row_5', 1); ?>" style="width:50%" />
+	</td></label>
+</tr>
+
+	</table>
+	<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+<?php
+}
+
+// включаем обновление полей при сохранении
+add_action('save_post', 'my_extra_fields_update_events', 0);
+
+/* Сохраняем данные, при сохранении поста */
+function my_extra_fields_update_events( $post_id ){
+	if ( !wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__) ) return false; // проверка
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE  ) return false; // если это автосохранение
+	if ( !current_user_can('edit_post', $post_id) ) return false; // если юзер не имеет право редактировать запись
+
+	if( !isset($_POST['extra']) ) return false;	
+
+	// Все ОК! Теперь, нужно сохранить/удалить данные
+	$_POST['extra'] = array_map('trim', $_POST['extra']);
+	foreach( $_POST['extra'] as $key=>$value ){
+		if( empty($value) ){
+			delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+			continue;
+		}
+
+		update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+	}
+	return $post_id;
+}
+
 
 
 

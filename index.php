@@ -107,21 +107,94 @@ wp_reset_query(); ?>
 
 
   </div>
+<style>
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
 
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
+</style>
 <!-- Modal -->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document" style="width: 1200px;">
-    <div class="modal-content">
+  <div class="modal-dialog" role="document" style=" border-radius: 0px; margin-top: 20px;">
+    <div class="modal-content" style="border-radius: 0px;">
       <div class="modal-header" >
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      
+<div class="row">
+       <div class="col-xs-10">  <h3 class="modal-title" style=" font-weight:bold;" id="myModalLabel">Добро пожаловать в детский центр развития Вершина!</h3></div>
+        <div class="col-xs-2">  <button type="button" style="margin-top: 10px;" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+      </div>
       </div>
       <div class="modal-body">
       <div class="row">
-      <div class="col-lg-6">
-        <h4 class="modal-title" style="color: #a50057; font-weight:bold;" id="myModalLabel">Записаться на первое занятие:</h4>
+      <div class="col-sm-6 col-xs-12">
+        <h4 class="modal-title" style="color: #a50057; margin-bottom: 10px; font-weight:bold;" id="myModalLabel">Записаться на первое занятие:</h4>
       <?php echo do_shortcode('[contact-form-7 id="20" title="Записаться на первое занятие"]'); ?>
-      </div></div>
+      </div>
+
+<div class="col-sm-6  col-xs-12">
+  <h4 class="modal-title" style="color: #a50057; margin-bottom: 10px; font-weight:bold;" id="myModalLabel">Ближайшие события:</h4>
+
+
+<?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array(
+      'post_type' => 'events',
+      'posts_per_page' => 3,
+      'paged'=>  $paged
+         );
+    $projects_category = new WP_Query( $args );
+    if( $projects_category->have_posts() ) {
+      while( $projects_category->have_posts() ) {
+        $projects_category->the_post();
+        ?>
+<div class="row">
+<div class="col-lg-3 col-xs-12"><?php the_post_thumbnail('','class=img-responsive img_center'); ?></div>
+<div class="col-lg-9  col-xs-12 event_item">
+<p><?php echo get_post_meta($post->ID, 'events_row_1', 1); ?>  <?php echo get_post_meta($post->ID, 'events_row_2', 1); ?></p>
+<h1><a href="<?php echo get_post_meta($post->ID, 'events_row_4', 1); ?>"><?php echo get_post_meta($post->ID, 'events_row_3', 1); ?></a></h1>
+<p class="event_price"><?php echo get_post_meta($post->ID, 'events_row_5', 1); ?></p>
+</div>
+</div>
+<hr style="margin-bottom: 10px; margin-top: 10px;" />
+
+
+
+        <article class="partners_article col-lg-4 col-md-4 col-sm-4 col-xs-12"><h1 style="display:none"><?php the_title() ?></h1> <a href="<?php echo get_post_meta($post->ID, 'partners_row_1', 1); ?>" target="blank"></a></article>
+
+            
+      <?php
+      }
+    }
+    else {
+
+      echo __('К сожалению, в ближайшее время, мероприятия не запланированы.',vershina_0_01);
+    }
+  ?>
+
+</div>
+
+      </div>
         
       </div>
      

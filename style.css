@@ -754,6 +754,28 @@ list-style-type: none;
 
 
 
+.event_item h1{
+color: #000;
+font-size: 18px;
+
+}
+
+.event_item a {
+  color: #000;
+  font-weight: bold;
+}
+
+.event_item a:hover{
+  color: #000;
+  text-decoration: underline
 
 
+}
+
+
+.event_item .event_price {
+color: #8C0055;
+font-size: 18px;
+margin-bottom: 0px;
+}
 
